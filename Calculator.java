@@ -4,6 +4,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
+import javax.swing.plaf.FontUIResource;
 
 public class Calculator{
     public Calculator(){
@@ -23,74 +24,90 @@ public class Calculator{
         //first row
         JButton sevenButton = new JButton("7");
         sevenButton.setBounds(30, 130, 80, 80);
+        sevenButton.setFont(new FontUIResource("Arial", 7, 40));
         jf.add(sevenButton);
 
         JButton eightButton = new JButton("8");
         eightButton.setBounds(130, 130, 80, 80);
+        eightButton.setFont(new FontUIResource("Arial", 7, 40));
         jf.add(eightButton);
 
         JButton ninetButton = new JButton("9");
         ninetButton.setBounds(230, 130, 80, 80);
+        ninetButton.setFont(new FontUIResource("Arial", 7, 40));
         jf.add(ninetButton);
 
         //second row
 
         JButton fourButton = new JButton("4");
         fourButton.setBounds(30, 230, 80, 80);
+        fourButton.setFont(new FontUIResource("Arial", 7, 40));
         jf.add(fourButton);
 
         JButton fiveButton = new JButton("5");
         fiveButton.setBounds(130, 230, 80, 80);
+        fiveButton.setFont(new FontUIResource("Arial", 7, 40));
         jf.add(fiveButton);
 
         JButton sixButton = new JButton("6");
         sixButton.setBounds(230, 230, 80, 80);
+        sixButton.setFont(new FontUIResource("Arial", 7, 40));
         jf.add(sixButton);
 
         //Third row
 
         JButton oneButton = new JButton("1");
         oneButton.setBounds(30, 330, 80, 80);
+        oneButton.setFont(new FontUIResource("Arial", 7, 40));
         jf.add(oneButton);
 
         JButton twoButton = new JButton("2");
         twoButton.setBounds(130, 330, 80, 80);
+        twoButton.setFont(new FontUIResource("Arial", 7, 40));
         jf.add(twoButton);
 
         JButton threeButton = new JButton("3");
         threeButton.setBounds(230, 330, 80, 80);
+        threeButton.setFont(new FontUIResource("Arial", 7, 40));
         jf.add(threeButton);
 
         //last row
 
         JButton dotButton = new JButton(".");
         dotButton.setBounds(30, 430, 80, 80);
+        dotButton.setFont(new FontUIResource("Arial", 7, 40));
         jf.add(dotButton);
 
         JButton zeroButton = new JButton("0");
         zeroButton.setBounds(130, 430, 80, 80);
+        zeroButton.setFont(new FontUIResource("Arial", 7, 40));
         jf.add(zeroButton);
 
         JButton equalButton = new JButton("=");
         equalButton.setBounds(230, 430, 80, 80);
+        equalButton.setFont(new FontUIResource("Arial", 7, 40));
         jf.add(equalButton);
 
         //Right side operators (/,-,+)
 
         JButton divButton = new JButton("/");
         divButton.setBounds(330, 130, 80, 80);
+        divButton.setFont(new FontUIResource("Arial", 7, 40));
         jf.add(divButton);
 
         JButton multiButton = new JButton("x");
         multiButton.setBounds(330, 230, 80, 80);
+        multiButton.setFont(new FontUIResource("Arial", 7, 40));
         jf.add(multiButton);
 
         JButton minusButton = new JButton("-");
         minusButton.setBounds(330, 330, 80, 80);
+        minusButton.setFont(new FontUIResource("Arial", 7, 40));
         jf.add(minusButton);
 
         JButton addButton = new JButton("+");
         addButton.setBounds(330, 430, 80, 80);
+        addButton.setFont(new FontUIResource("Arial", 7, 40));
         jf.add(addButton);
 
 
