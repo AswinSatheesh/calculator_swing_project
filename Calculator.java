@@ -85,8 +85,12 @@ public class Calculator{
         multiButton.setBounds(330, 230, 80, 80);
         jf.add(multiButton);
 
+        JButton minusButton = new JButton("-");
+        minusButton.setBounds(330, 330, 80, 80);
+        jf.add(minusButton);
+
         JButton addButton = new JButton("+");
-        addButton.setBounds(330, 330, 80, 80);
+        addButton.setBounds(330, 430, 80, 80);
         jf.add(addButton);
 
 
