@@ -5,15 +5,19 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import javax.swing.plaf.FontUIResource;
+import java.awt.*;  
+import java.awt.event.*;  
 
-public class Calculator{
+public class Calculator  implements ActionListener {
+    JFrame jf;
+    JLabel displayLabel;
     public Calculator(){
-        JFrame jf = new JFrame("Calculator");  //This will create a jframe (create a window with top heading 'Calculator')
+        jf = new JFrame("Calculator");  //This will create a jframe (create a window with top heading 'Calculator')
         jf.setLayout(null);
         jf.setSize(600,600);
         jf.setLocation(920, 80);
 
-        JLabel displayLabel = new JLabel("Hello");
+        displayLabel = new JLabel("Hello");
         displayLabel.setBounds(30, 50, 540, 40);
         displayLabel.setBackground(Color.GRAY);
         displayLabel.setOpaque(true);
@@ -25,6 +29,7 @@ public class Calculator{
         JButton sevenButton = new JButton("7");
         sevenButton.setBounds(30, 130, 80, 80);
         sevenButton.setFont(new FontUIResource("Arial", 7, 40));
+        sevenButton.addActionListener(this);
         jf.add(sevenButton);
 
         JButton eightButton = new JButton("8");
@@ -121,4 +126,13 @@ public class Calculator{
 public static void main(String[] args) {
     new Calculator();
 }
+
+
+@Override
+public void actionPerformed(ActionEvent e) {
+    // jf.getContentPane().setBackground(Color.GREEN);
+    displayLabel.setText("7");
+    
+}
+
 }
