@@ -9,6 +9,8 @@ import java.awt.*;
 import java.awt.event.*;  
 
 public class Calculator  implements ActionListener {
+    boolean isOperatorClicked = false;
+    String oldValue;
     JFrame jf;
     JLabel displayLabel;
     JButton sevenButton; 
@@ -186,12 +188,30 @@ public static void main(String[] args) {
 public void actionPerformed(ActionEvent e) {
     // jf.getContentPane().setBackground(Color.GREEN);
     // displayLabel.setText("7");
-
+    
     if(e.getSource() == sevenButton){
-        displayLabel.setText( displayLabel.getText()+"7");
+
+        if (isOperatorClicked ){
+
+            displayLabel.setText("7");
+            isOperatorClicked = false;
+            
+        }else{
+            displayLabel.setText( displayLabel.getText()+"7");
+            oldValue = displayLabel.getText();
+        }
 
     }else if(e.getSource() == eightButton){
-        displayLabel.setText( displayLabel.getText()+"8");
+        if (isOperatorClicked ){
+
+            displayLabel.setText("8");
+            isOperatorClicked = false;
+            
+        }else{
+            displayLabel.setText( displayLabel.getText()+"8");
+            oldValue = displayLabel.getText();
+        }
+        
     }else if(e.getSource() == ninetButton){
         displayLabel.setText( displayLabel.getText()+"9");
     }else if(e.getSource() == fourButton){
@@ -212,7 +232,14 @@ public void actionPerformed(ActionEvent e) {
         displayLabel.setText( displayLabel.getText()+"0");
 
     }else if(e.getSource() == equalButton){
-        displayLabel.setText("=");
+        String newValue = displayLabel.getText();
+        float oldValueF = Float.parseFloat(oldValue);
+        float newValueF = Float.parseFloat(newValue);
+        float result = oldValueF + newValueF; 
+        
+        displayLabel.setText(result+"");
+
+
     }else if(e.getSource() == divButton){
         displayLabel.setText("/");
     }else if(e.getSource() == multiButton){
@@ -220,7 +247,7 @@ public void actionPerformed(ActionEvent e) {
     }else if(e.getSource() == minusButton){
         displayLabel.setText("-");
     }else if(e.getSource() == addButton){
-        displayLabel.setText("+");
+        isOperatorClicked = true;
     }
     else if(e.getSource() == clearButton){
         displayLabel.setText("");
@@ -230,4 +257,3 @@ public void actionPerformed(ActionEvent e) {
 
 }
 
-//--------------------1:03---------------
